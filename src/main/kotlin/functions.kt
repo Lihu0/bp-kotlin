@@ -2,7 +2,7 @@ import kotlin.math.pow
 
 fun numToArr(num: Int) = num.toString().toCharArray().toTypedArray().map { i -> i.digitToInt() }
 
-fun calcbp(selected_num: Int, guess_num: Int, dig: Int = 4):List<Int> {
+fun calcbp(selected_num: Int, guess_num: Int, dig: Int = 4): List<Int> {
     val selectedArr = numToArr(selected_num)
     val guessArr = numToArr(guess_num)
     var bool = 0
@@ -25,7 +25,7 @@ fun calcbp(selected_num: Int, guess_num: Int, dig: Int = 4):List<Int> {
 }
 
 
-fun checkNum(num:Int):Boolean{
+fun checkNum(num:Int): Boolean{
     val numArr = numToArr(num)
     for (i in numArr.indices) {
         for (j in numArr.indices) {
@@ -37,7 +37,7 @@ fun checkNum(num:Int):Boolean{
     return true
 }
 
-fun rndNum(dig: Int):Int{
+fun rndNum(dig: Int): Int{
     val max = (10.0.pow(dig) - 1).toInt()
     val min = 10.0.pow(dig - 1).toInt()
     var rnd: Int
