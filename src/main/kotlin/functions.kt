@@ -41,9 +41,8 @@ fun rndNum(dig: Int): Int{
     val max = (10.0.pow(dig) - 1).toInt()
     val min = 10.0.pow(dig - 1).toInt()
     var rnd: Int
-    do {
+    do 
         rnd = (min..max).random()
-    }
     while (!checkNum(rnd))
     return rnd
 }
